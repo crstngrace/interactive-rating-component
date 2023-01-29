@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Rating state start -->
+      <div id="rate_us" class="card">
+        <figure class="icon">
+          <img src="./images/icon-star.svg" alt="Rating Icon" />
+        </figure>
+
+        <h1 class="title">How did we do?</h1>
+
+        <p class="content">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <ul class="ratings">
+          <li onclick="onSetRating(this, 1)">1</li>
+          <li onclick="onSetRating(this, 2)">2</li>
+          <li onclick="onSetRating(this, 3)">3</li>
+          <li onclick="onSetRating(this, 4)">4</li>
+          <li onclick="onSetRating(this, 5)">5</li>
+        </ul>
+
+        <button type="button" class="btn-action" onClick="onSubmitRating()">
+          Submit
+        </button>
+      </div>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <div id="rate_success" class="card flex-center hide">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="Rating Icon"
+          class="success-img"
+        />
+
+        <span class="selected-text">
+          You selected <span id="rating">0</span> out of 5
+        </span>
+
+        <h2 class="title">Thank you!</h2>
+
+        <p class="content text-center">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <!-- Thank you state end -->
+
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI"
+          target="_blank"
+        >
+          Frontend Mentor </a
+        >. &nbsp; Coded by <a href="#">Cristine Grace</a>.
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>

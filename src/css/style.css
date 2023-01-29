@@ -1,0 +1,147 @@
+@import url('base.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Overpass', Arial, Helvetica, sans-serif !important;
+  font-size: 14px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  background-color: var(--darker-blue);
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.card {
+  width: 90%;
+  max-width: 380px;
+  padding: 30px;
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+}
+
+.card .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 14px;
+  background: var(--medium-gray);
+  border-radius: 50%;
+}
+
+.card .title {
+  margin: 15px 0;
+}
+
+.card .content {
+  color: var(--light-gray);
+  line-height: 20px;
+}
+
+.card .ratings {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 30px 0 25px 0;
+  list-style: none;
+}
+
+.card .ratings li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--light-gray);
+  background-color: var(--medium-gray);
+  border-radius: 50%;
+}
+
+.card .ratings li:hover,
+.card .ratings li.active {
+  color: var(--text-color-default);
+  cursor: pointer;
+}
+
+.card .ratings li:hover {
+  background-color: var(--orange);
+}
+
+.card .ratings li.active {
+  background-color: var(--light-gray);
+}
+
+.card .btn-action {
+  width: 100%;
+  padding: 14px;
+  color: var(--text-color-default);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: var(--orange);
+  border: 0;
+  border-radius: 20px;
+}
+
+.card .btn-action:hover {
+  color: var(--orange);
+  background-color: var(--text-color-default);
+  cursor: pointer;
+}
+
+.selected-text {
+  margin: 25px 0 15px 0;
+  padding: 10px 15px;
+  color: var(--orange);
+  background-color: var(--medium-gray);
+  border-radius: 20px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 576px) {
+  .card .ratings li {
+    width: 50px;
+    height: 50px;
+  }
+}
